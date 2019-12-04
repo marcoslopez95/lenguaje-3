@@ -18,4 +18,5 @@ class Estado extends Model
     public function ciudades(){
         return $this->hasMany('app\Ciudad','idEstado','idEstado');
     }
+    
 }

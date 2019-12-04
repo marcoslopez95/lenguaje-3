@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCiudadesTable extends Migration
+class CreateAlcaldeTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateCiudadesTable extends Migration
      */
     public function up()
     {
-        Schema::create('ciudades', function (Blueprint $table) {
-            $table->bigIncrements('idCiudad');
-            $table->string('NombreCiudad');
-            $table->integer('idEstado',false,true);
+        Schema::create('alcalde', function (Blueprint $table) {
+            $table->Increments('Cedu_alcalde');
+            $table->string('NombreAlcalde',15);
             
         });
     }
@@ -28,6 +27,6 @@ class CreateCiudadesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ciudades');
+        Schema::dropIfExists('alcalde');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCiudadesTable extends Migration
+class AddColumnIdAlcaldeCiudadesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateCiudadesTable extends Migration
      */
     public function up()
     {
-        Schema::create('ciudades', function (Blueprint $table) {
-            $table->bigIncrements('idCiudad');
-            $table->string('NombreCiudad');
-            $table->integer('idEstado',false,true);
-            
+        Schema::table('ciudades', function (Blueprint $table) {
+            //
+            $table->integer('idAlcalde',false,true);
+            $table->foreign('idAlcalde')->references('Cedu_alcalde')->on('alcalde');
         });
     }
 
@@ -28,6 +27,8 @@ class CreateCiudadesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ciudades');
+        Schema::table('ciudades', function (Blueprint $table) {
+            //
+        });
     }
 }

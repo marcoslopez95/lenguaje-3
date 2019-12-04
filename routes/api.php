@@ -18,4 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::get('/formulario', 'CiudadController@formulario')->name('form');
 Route::POST('/guardar-ciudad', 'CiudadController@guardar_ciudad')->name('guardar-ciudad');
+route::get('/reporte','CiudadController@reporte')->name('reporte');
 

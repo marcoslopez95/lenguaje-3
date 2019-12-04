@@ -14,6 +14,3 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/formulario', 'CiudadController@formulario')->name('form');
-Route::POST('/guardar-ciudad', 'CiudadController@guardar_ciudad')->name('guardar-ciudad');
-route::get('/reporte','CiudadController@reporte')->name('reporte');

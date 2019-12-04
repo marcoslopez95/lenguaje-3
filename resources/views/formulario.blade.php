@@ -16,5 +16,5 @@
     <input type="submit" value="enviar">
 </form>
 
-<a href="{{route('reporte')}}">Reporte de Ciudades</a>
+{{-- <a href="{{route('reporte')}}">Reporte de Ciudades</a> --}}
 @endsection
